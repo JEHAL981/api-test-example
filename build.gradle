@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'io.cucumber:cucumber-java:6.1.1'
+    testCompile 'io.cucumber:cucumber-junit:6.1.1'
+    testImplementation 'io.rest-assured:rest-assured:4.3.0'
+}
+
+test {
+    useJUnit()
+
+    maxHeapSize = '1G'
+}
